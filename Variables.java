@@ -4,7 +4,7 @@ public class variable {
 		// TODO Auto-generated method stub
 		
 		int Num1;
-		//declaring a variable in this case a integer called Num1
+		//declaring a variable in this case an integer called Num1
 		
 		Num1= 53;
 		//Initialising the variable Num1 to the value of 53
