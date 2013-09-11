@@ -8,9 +8,8 @@ public class ForLoops {
 			// incrementally increase i by one every time the loop is executed.
 			// stop loop before i reaches 5
 			
-			// print hello every time the loop is executed.
-			
 			System.out.printf("the value of i is: %d ", i);
+			// print the value of i every time the loop is executed.
 			//format specifier %d specifies a decimal value prints all on one line.
 			//%d\n to format the output on a new line
 		}
