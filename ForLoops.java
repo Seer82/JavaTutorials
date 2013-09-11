@@ -4,8 +4,7 @@ public class ForLoops {
 
 		for (int i = 0; i < 5; i++) {
 			// initial state of the variable
-			// loop conditional argument in this case if i is less than 5
-			// continue to loop
+			// loop conditional argument in this case if i is less than 5 continue to loop
 			// incrementally increase i by one every time the loop is executed.
 			// stop loop before i reaches 5
 			
