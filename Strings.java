@@ -19,7 +19,7 @@ public class Strings {
 		int age = 55;
 		
 		System.out.println("my age is " + age);
-		// concatenating a strin
+		// concatenating a string
 		
 
 	}
