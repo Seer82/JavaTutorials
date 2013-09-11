@@ -19,6 +19,9 @@ public class variable {
 		long long1 = 736276;
 		double double1 = 6.356376;
 		float float1 = 367.7f;
+		char char1 = 'p';
+		boolean bool1 = true;
+		byte byte1 = 127;
 		
 		//variables of different datatypes
 		
@@ -26,5 +29,10 @@ public class variable {
 		System.out.println(long1);
 		System.out.println(double1);
 		System.out.println(float1);
+		System.out.println(char1);
+		System.out.println(bool1);
+		System.out.println(byte1);
 
 	}
+
+}
