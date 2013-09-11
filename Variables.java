@@ -1,4 +1,3 @@
-
 public class variable {
 
 	public static void main(String[] args) {
@@ -31,7 +30,8 @@ public class variable {
 		System.out.println(float1);
 		System.out.println(char1);
 		System.out.println(bool1);
-		System.out.println(byte1);
+		System.out.println(byte1); 
+	
 
 	}
 
