@@ -1,0 +1,45 @@
+public class Rocket {
+
+	// A class contains two things:
+	// 1. data or object states, instance variables.
+	// 2 subroutines, which are called methods in java and other object
+	// oriented programming languages
+	// through methods we can manipulate the internal states of objects.
+
+	String name;// instance variables
+	int altitude;
+	int weight;
+	int speed;
+
+	void engineOn() { // first letter of a method is lower case and next word is
+						// capitalised
+		if (speed > 0) {
+			System.out.println("Rocket engines are on");//method code body
+		} else
+			System.out.println("Rocket engines are off");
+	}
+
+	void orbit() {
+		if (altitude >= 10000) {
+			System.out.println("Rocket is now in orbit");
+		} else
+			System.out.println("Rocket is not yet in orbit");
+	}
+
+}
+
+class moonrocket {
+	public static void main(String[] args) {
+
+		Rocket Rocket1 = new Rocket(); // new instance object of the class
+										// rocket.
+
+		Rocket1.name = "moon rocket";
+		Rocket1.altitude = 10000;
+		Rocket1.weight = 25;
+		Rocket1.speed = 0;
+		Rocket1.engineOn();// calling methods from instance object
+		Rocket1.orbit();
+
+	}
+}
