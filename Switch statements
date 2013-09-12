@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class SwitchStatement {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+
+		System.out.println("please enter a keyword: ");
+
+		String text = input.nextLine();
+
+		switch (text) {
+
+		case "wobble":
+			// case must be a constant and not a variable.
+			System.out.println("wibble");
+			break;
+
+		case "plink":
+			System.out.println("plonk");
+			break;
+
+		case "ding":
+			System.out.println("dong");
+
+		default:
+			System.out.println("you entered an invalid keyword");
+
+			// default is used if no case is matched by the user input
+
+		}
+
+	}
+}
