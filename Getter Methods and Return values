@@ -1,0 +1,42 @@
+class Person {
+
+	String name;
+	int age;
+
+	void speak() {
+		System.out.println("my name is " + name);
+	}
+
+	int calculateYearsToRetirement() { // this method returns an int type
+
+		int yearsLeft = 65 - age;
+		return yearsLeft; // return the value of yearsLeft
+	}
+
+	int getAge() { // getter method
+		return age;
+	}
+
+	String getName() { //getter method
+		return name;
+	}
+}
+
+public class Getters {
+
+	public static void main(String[] args) {
+
+		Person person1 = new Person();
+
+		person1.name = "Colin";
+		person1.age = 30;
+		// person1.speak();
+		int years = person1.calculateYearsToRetirement();
+		System.out.println("you have: " + years + " to retirement");
+		
+		int age = person1.getAge();
+		String name = person1.getName();
+		System.out.println("my name is " + name + " and i am " + age + " years old");
+
+	}
+}
