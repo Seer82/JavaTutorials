@@ -1,0 +1,32 @@
+// note when passing a parameter to a method you need to know its type rather than its name
+
+class Man {
+	public void speak(String text) {
+		System.out.println(text);
+	}
+
+	public void spin(int spin) {
+		System.out.println("she blew my mind " + spin + " times");
+	}
+
+	// a parameter is a variable you pass into a method
+
+	public void dance(String direction, int time) {
+		System.out.println("you danced for " + time + " hours in a "
+				+ direction + " direction");
+		// setting the method to receive two parameters, separated by commas
+	}
+
+}
+
+public class MethodPara {
+
+	public static void main(String[] args) {
+
+		Man Colin = new Man();
+		Colin.speak("lets hear some aphex acid");
+		Colin.spin(69);
+		Colin.dance("northerly", 3); // passing the right type of parameters in
+										// the correct order separated by a comma
+	}
+}
