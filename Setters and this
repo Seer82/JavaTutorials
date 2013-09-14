@@ -1,0 +1,44 @@
+class Frog {
+	private String name;
+	private int age;
+
+	public void setName(String newName) { // data encapsulation hiding the
+											// variables of the class
+		this.name = newName;// this is to disambiguate 
+	}
+
+	public void setAge(int newAge) {
+		age = newAge;
+	}
+
+	public String getName() {
+		return name;
+
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+}
+
+public class SettersThis {
+
+	public static void main(String[] args) {
+
+		Frog frog1 = new Frog();
+
+		// frog1.name = "bertie"; here i am setting a instance variable rather
+		// than setting a method
+
+		// frog1.age = 5; here i am setting a instance variable rather
+		// than setting a method
+
+		frog1.setName("bertie");
+
+		frog1.setAge(4);
+
+		System.out.println(frog1.getName());
+		System.out.println(frog1.getAge());
+	}
+}
