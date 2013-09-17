@@ -1,0 +1,85 @@
+public class Machine {
+
+	/* private */protected String name = "Machine Type 1"; /*
+														 * if variable is
+														 * declared private
+														 * 
+														 * it is only accessible
+														 * from within this
+														 * class, otherwise it
+														 * is accessible from
+														 * anywhere within the
+														 * package
+														 */
+
+	public void Start() {
+		System.out.println("Machine Started");
+
+	}
+
+	public void Stop() {
+		System.out.println("Machine Stopped");
+	}
+
+	/**
+	 * @param args
+	 */
+
+}
+
+
+public class Car extends Machine {//final classes cannot be extended
+	
+	public void wipingWindShield(){
+		
+		System.out.println("now wiping windshield");
+	}
+		public void Start(){
+			System.out.println("car Started");// this method overrides the parent class method of the same name
+		
+		
+		
+	}
+		
+		public void Stop(){
+			System.out.println("car Stopped");//this method overrides the parent class method of the samename
+		}
+		
+		
+		public void showInfo(){
+			System.out.println("Car name " + name);
+		}
+		
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+public class Inherit {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Machine Mach1 = new Machine();
+		
+		Mach1.Start();
+		Mach1.Stop();
+		
+		Car car1 = new Car();
+		
+		car1.Start();
+		car1.Stop();
+		car1.wipingWindShield();
+		car1.showInfo();
+
+	}
+
+}
