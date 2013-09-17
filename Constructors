@@ -1,0 +1,49 @@
+class Machine {
+
+	private String name;
+	private int code;
+
+	public Machine() { // Constructors run every time an object of the
+						// Corresponding class is created
+        this("Arnie", 0);// to call another constructor from within another constructor
+        //make sure the first line in the code is the constructor code
+        
+        
+		// Constructors have the same name as your class
+		// with an upper case
+		System.out.println("Constructor running!");
+
+		name = "Arnie";// constructors are also used for initialising instance
+						// variables
+
+	}
+
+	public Machine(String name) {
+		System.out.println("second constructor running");
+		this.name = name;// setting the class variable to the name of the local
+							// constructor variable
+
+	}
+
+	public Machine(String name, int code) {
+		this.name = name;
+		this.code = code;
+		System.out.println("Third constructor running");
+	}
+}
+
+public class Constructors {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Machine machine1 = new Machine();
+		//Machine machine2 = new Machine("bert"); // looks for the constructor//
+												// that passes in a string
+		//Machine machine3 = new Machine("Chalky", 7);
+
+	}
+
+}

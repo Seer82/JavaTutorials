@@ -1,0 +1,23 @@
+public class MultiArray {
+
+	public static void main(String[] args) {
+
+		int[][] numbers = { { 2, 4, 8, 16 }, { 3, 9, 27, 81 },
+				{ 4, 16, 64, 256 } };
+		// A multidimensional array is essentially an array of arrays
+		// here we are declaring it and initialising it at the same time
+		System.out.println(numbers[1][2]);
+		/*
+		 * here we first reference the array within the larger array we want and
+		 * *then the element within that array you can think of this as rows and
+		 * columns
+		 */
+		for (int row = 0; row < numbers.length; row++) {
+			for (int col = 0; col < numbers[row].length; col++)
+				// loop for iterating through multidimensional array
+				System.out.print(numbers[row][col] + "\t");
+			// backslash t, tabs the output
+		}
+
+	}
+}

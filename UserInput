@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+
+public class Userin {
+	
+	public static void main (String[] args) {
+	
+	Scanner input = new Scanner(System.in);
+	// create an instance of scanner called input
+	
+	System.out.println("Enter a line of text here: ");
+	// print out a prompt for the user
+	String line = input.nextLine();
+	//create a new string object called line form the next line of the input scanner
+	//int value = input.nextInt(); other data types are valid as well
+	
+	System.out.println("you have entered: " + line);
+	//output whatever the user entered
+	
+	
+
+}
+
+}

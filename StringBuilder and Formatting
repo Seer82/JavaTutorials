@@ -1,0 +1,54 @@
+public class StringB {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		/*
+		 * String info = " "; this is inefficient
+		 * 
+		 * info += "my name is bob"; info +=" "; info+="and I am a builder";
+		 * 
+		 * System.out.println(info);
+		 */
+
+		StringBuilder sb = new StringBuilder("");
+
+		sb.append("my name is dave");
+		sb.append(", ");
+		sb.append("I am an astronaut ");
+
+		System.out.println(sb);
+
+		StringBuilder sb2 = new StringBuilder(""); // chaining methods
+		sb2.append("my name is delgado").append(" ")
+				.append("and i am the master ");
+		System.out.println(sb2);
+
+		// //////////////////////////////////Formatting//////////////////////////////////
+
+		System.out
+				.print("here is some text.\t that was a tab \nthat was a new line ");
+
+		System.out.printf("total cost: %d Total quantity: %d", 5, 120);// print
+																		// format
+
+		for (int i = 0; i < 20; i++) {
+			System.out.printf("%2d %s \n", i, "here is some text");
+			/*
+			 * %d represent the integer that is being formatted %s is for string
+			 */
+
+		}
+
+		System.out.printf("total value: %.2f\n", 5.5965984);
+		System.out.printf("total valye: %6.2f\n", 5.5965984);// aligning to the right
+		/*
+		 * &f is to specify a floating point
+		 * .2 specifies how many decimal places you want your floating point to
+		 * be
+		 */
+	}
+}

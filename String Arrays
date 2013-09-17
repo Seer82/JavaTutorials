@@ -1,0 +1,28 @@
+public class StringArray {
+
+	public static void main(String[] args) {
+
+		String[] names = new String[3];
+		//String is class (hence why it is capitalised), and there for a reference variable
+		//no memory is yet allocated for the string itself.
+		//null is the default value of a string.
+		
+		names[0] = "harry"; //here the memory is being allocated for a string.
+		names[1] = "dick";
+		names[2] = "tom";
+		
+		System.out.println(names[2]);
+		
+		String[] towns = {"blackburn", "gateshead", "bury"};
+		
+		System.out.println(towns[1]);
+		
+		for(String town:towns){
+			System.out.println(town);
+			//iterate through towns array with a variable 'town' 
+		}
+		
+		
+	}
+
+}
