@@ -1,0 +1,65 @@
+class Thing {
+	public final static  int LUCKY_NUMBER = 7;  //final class variable cannot be reassigned
+	public String name;
+	public int id;
+	public static String Description;// static variables there is only one copy
+										// belonging to that class
+	
+	public static int count;
+	
+	public Thing(){ // Constructor attached to class rather than object instances
+		
+		id = count;//creating a unique id with count
+		count++;
+		
+	}
+
+	public void showName() {// instance methods can access static data
+		System.out.println("Object id: " + id + " " + Description + " " + name);
+
+	}
+
+	public static void showInfo() { // static method
+		// static methods can also access static class data
+		System.out.println("hello");// could output description here
+		// static methods cannot use instance variables
+
+	}
+
+}
+
+public class Staticvar {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Thing.Description = "I am a thing";// accessing the static class
+											// variable
+
+		Thing.showInfo();// accessing the static class method
+		System.out.println("object instance number before count: = " + Thing.count);
+		Thing thing1 = new Thing();
+		Thing thing2 = new Thing();
+
+		thing1.name = ("bob");
+		thing2.name = ("sue");
+
+		thing1.showName();
+		thing2.showName();
+
+		System.out.println(Thing.Description);
+
+		System.out.println(Math.PI);// static fields cannot be reassigned, also
+									// they are by convention represented by
+									// upper case
+		
+		System.out.println(Thing.LUCKY_NUMBER);
+		
+		System.out.println("object instance number after count: = " + Thing.count);
+
+	}
+
+}
