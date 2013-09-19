@@ -1,0 +1,94 @@
+//////////////// Machine Class///////////////////////////
+package com.java.tutorials;
+
+public class Machine implements Info{
+	
+	private int id=7;
+
+	public void start(){
+		
+		System.out.println("machine started!");
+
+	}
+
+	@Override
+	public void showInfo() {
+		System.out.println("Machine ID is " + id);
+		
+	}
+
+}
+
+////////////////Person Class///////////////////////////
+package com.java.tutorials;
+
+public class Person implements Info{
+	
+	private String name;
+	
+	
+
+	public Person(String name) {
+		this.name = name;
+	}
+
+
+
+	public void Greets(){
+		System.out.println("hello there");
+		
+	
+	
+	}
+
+
+
+	
+	public void showInfo() {
+		System.out.println("Person name is " + name);
+		
+	}
+
+////////////////Main Class///////////////////////////
+package com.java.tutorials;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Machine mach1 = new Machine();
+		mach1.start();
+
+		Person person1 = new Person("bob");
+		person1.Greets();
+		mach1.showInfo();
+		person1.showInfo();
+
+		Info info1 = new Machine();
+		info1.showInfo(); // if a class implements an interface, you can
+		// use the interface to reference objects.
+
+		outputInfo(mach1);// can pass any object that implements the info
+							// interface
+		// into a method
+		outputInfo(person1);
+
+	}
+
+	private static void outputInfo(Info info) {
+		info.showInfo();
+
+	}
+
+}
+////////////////Info Interface///////////////////////////
+
+package com.java.tutorials;
+
+//like classes interfaces start with an upper case letters 
+
+public interface Info { 
+	public void showInfo(); // all interfaces contain are method headers
+	
+
+}
