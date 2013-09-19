@@ -1,0 +1,19 @@
+
+//to use classes from other packages, import package.class
+//packages can have sub packages such as human.male for example
+// java convention of package naming is a backwards website so you dont get a conflict
+//com.markswebsite.myapp is an example
+
+//by convention packages dont have any spaces and are all in lower case
+public class package1 {// the package a class is declared at the beginning  {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+ 
