@@ -1,0 +1,42 @@
+
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		
+		byte b = 34;
+		short s = 56;
+		int i = 536;
+		long l = 63982;
+		
+		float f = 5242.8f;
+		double d = 33.672;
+		
+		System.out.println(Integer.MAX_VALUE);
+		
+		i = (int)l; //casting a long type to an int type
+		
+		System.out.println(i);
+		
+		i = (int)f; //casting a float to an int type, it will not round up the value
+		// make sure you have enough memory for the type you are casting too
+		//for example casting a long to a byte is a bad idea.
+		
+		System.out.println(i);
+		
+	Math.round(f);
+	
+	//System.out.println(f);
+	
+	
+		
+		
+		
+		
+
+	}
+
+}
