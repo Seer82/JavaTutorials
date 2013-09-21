@@ -1,0 +1,42 @@
+public class Main {
+
+	public static void main(String[] args) {
+		Plant plant = new Plant();
+		plant.setName("mark");
+		
+		System.out.println(plant.getName());
+
+	}
+
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////#
+
+public class Plant {
+
+	public static final int ID = 7; // public constant
+	private String name; // encapsulate the class variable
+
+	public String getData() { // public methods
+
+		String data = "somestuff" + calculateGrowthForecast();
+
+		return name;
+
+	}
+
+	private int calculateGrowthForecast() {
+		return 9;
+	}
+
+	public String getName() { // getter method, exposed method for getting the
+								// name variable of an instance object
+		return name;
+	}
+
+	public void setName(String name) { // setter method, exposed method for
+										// setting the name variable of an instance object
+		this.name = "mark";
+	}
+
+}
