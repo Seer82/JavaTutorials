@@ -17,7 +17,9 @@ public class Main {
 		Tree1.shedLeaves();
 
 		// Plant2.shedLeaves(); this will not work
-		doGrow(Tree1);
+		doGrow(Tree1);;// where ever a class is expected a subclass that
+						// inherits the superclass can be used
+
 
 	}
 
