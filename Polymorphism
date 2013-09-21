@@ -1,0 +1,66 @@
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+		Plant plant1 = new Plant();
+		Tree Tree1 = new Tree();
+
+		Plant plant2 = new Tree();// since Tree extends the superclass Plant
+		// you can reference the tree object as a plant object as they are
+		// essentially the same thing, this is polymorphism
+
+		plant2.grow();
+
+		Tree1.shedLeaves();
+
+		// Plant2.shedLeaves(); this will not work
+		doGrow(Tree1);
+
+	}
+
+	public static void doGrow(Plant plant) {
+		plant.grow();
+
+	}
+
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+public class Plant {
+
+	public void grow(){
+	
+System.out.println("plant growing");		
+		
+	}
+
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+public class Tree extends Plant {
+
+	@Override
+	public void grow() {
+		System.out.println("Tree growing");// can override the plant method
+	}
+		
+	public void shedLeaves() {
+		System.out.println("Leaves shedding");
+		
+	}
+	
+
+}
+
+
+
+
