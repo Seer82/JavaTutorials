@@ -1,0 +1,78 @@
+package com.java.tutorials;
+
+/*private = only with the same class
+ * public = can be accessed anywhere
+ * protected = same class, subclass and same package
+ * no modifier = same package only
+ */
+
+public class AccessSpecifiers {
+
+	public static void main(String[] args) {
+
+		Plant plant1 = new Plant();
+		Oak oak1 = new Oak();
+		System.out.println(plant1.name);
+
+		System.out.println(plant1.ID);
+
+		System.out.println(oak1.size);
+
+		// System.out.println(plant1.type); wont work type is declared private
+
+	}
+
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+package com.java.tutorials;
+
+public class Plant {
+//bad practice to declare instance variables public
+	String name;
+	
+	public static final int ID = 8; // if you must use public instance variable it is best to 
+	// make it constant so it cant be changed
+	
+	private String type;// private means you can only access this variable from within this class
+
+	protected String size;
+	
+	int height;// if no access specifier is given then the variable is given package level access
+	//i.e can be accessed by sub
+	
+	public Plant()
+
+	{
+		this.name = "Frank";
+		this.size="medium";
+		this.type = "plant";
+
+	}
+
+}
+//////////////////////////////////////////////////////////////////////////////////
+
+package com.java.tutorials;
+
+public class Oak extends Plant {
+	
+	public Oak() {
+		this.size="large"; // size works as it is a protected String which means
+		//it is accessible in sub-classes and anywhere in the same package.
+		
+		this.height=10;
+		
+		
+		//type = tree; this wont work as type is declared private in the Plant class// 
+		
+		
+		
+	}
+
+
+
+}
+
+
