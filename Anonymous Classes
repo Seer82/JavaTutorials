@@ -1,0 +1,45 @@
+class Machine {
+
+	public void start() {
+
+		System.out.println("machine starting");
+
+	}
+	
+	interface Plant{
+		
+		public void grow();
+		
+	}
+
+	public static class Anon {
+
+		public static void main (String[] args){
+		
+		Machine Mach = new Machine(){               //this is the anonymous class from here...
+		@Override public void start(){ // child class of machine
+			
+			System.out.println("Camera snapping");
+			
+		}
+			
+		};// to here anonymous as it is a class that has no name but has an overridden method
+		
+		Mach.start();
+		
+		Plant plant = new Plant(){ // another example of an anonymous class implementing an interface
+
+			@Override
+			public void grow() {
+				System.out.println("plant growing");
+				
+			}
+			
+			
+		};
+	
+		plant.grow();
+	}
+	}
+
+}
