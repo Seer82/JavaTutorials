@@ -1,0 +1,54 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+		// //////////////////////////Before Java
+		// 5///////////////////////////////////
+		ArrayList List = new ArrayList();
+
+		List.add("apple");
+		List.add("banana");
+		List.add("apple");
+
+		String fruit = (String) List.get(1);// downcasting from object to string
+
+		System.out.println(fruit);
+
+		// //////////////////////////Modern
+		// Style///////////////////////////////////
+
+		ArrayList<String> List1 = new ArrayList<String>(); // after a generic
+															// class you
+		// declare in the diamond
+		// brackets what type to
+		// work with
+
+		List1.add("cat");
+		List1.add("dog");
+		List1.add("monkey");
+
+		String animal = List1.get(0); // now returning object of the specified
+										// type.
+
+		System.out.println(animal);
+
+		// //////////////////////////There can be more that one type
+		// argument///////////////
+
+		HashMap<Integer, String> Map = new HashMap<Integer, String>();
+
+		// /////////////////////////Java 7
+		// Style/////////////////////////////////////////////
+
+		ArrayList<String> List2 = new ArrayList<>();// Java 7 infers what you
+													// want in your list
+
+	}
+
+}
