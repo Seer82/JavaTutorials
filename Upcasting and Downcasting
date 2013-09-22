@@ -1,0 +1,77 @@
+class Machine {
+
+	public void start() {
+
+		System.out.println("Machine Started");
+
+	}
+
+}
+
+class Camera extends Machine {
+
+	public void start() {
+
+		System.out.println("Camera Started");
+
+	}
+
+	public void snap() {
+
+		System.out.println("Photo taken");
+
+	}
+}
+
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+		Machine Mach1 = new Machine();
+		Camera Cam1 = new Camera();
+
+		Mach1.start();
+		Cam1.start();
+		Cam1.snap();
+
+		// Upcasting
+
+		Machine Mach2 = Cam1; // upcasting the class hierarchy
+		Mach2.start();// will use the methods stored in the object camera, not
+						// the reference variable which is Mach2
+						// the object type decides what implementation of the
+						// method that can be called
+
+		// Mach2.snap(); wont work because the type reference variable decides
+		// what
+		// methods can be called
+
+		// Downcasting
+
+		Machine Mach3 = new Camera();
+		Camera Cam2 = (Camera) Mach3;// to downcast you have to declare what
+										// variable you are casting down too
+		
+		//Java wants this confirmation as downcasting is inherently unsafe
+		
+		Cam2.snap();
+		Cam2.start();
+
+		
+		/*
+		 * cannot change machine object to a camera object
+		 * will get a run time error
+		 * 
+		Machine Mach4 = new Machine();
+		Camera Cam3 = (Camera) Mach4;
+		
+		Cam3.snap();
+		*/
+		
+		
+	}
+
+}
