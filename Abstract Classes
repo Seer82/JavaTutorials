@@ -1,0 +1,112 @@
+public class AbstractClasses {
+// when a class extends a abstract class its making a strong connection between
+	//the parent class and the functionality of classes derived from the base class
+	// in this case that bother car and camera are machines.
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+		Camera cam1 = new Camera();
+
+		cam1.setId(5);
+
+		Car car1 = new Car();
+
+		car1.setId(4);
+		
+		car1.run();
+
+		// Machine machine1 = new Machine();// no such thing as an abstract
+		/*
+		 * machine, it is just a base class that describes the base
+		 * Functionality of the child classes since Machine class is
+		 * declared abstract a machine object cannot be instantiated
+		 */
+	}
+
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+
+public abstract class Machine {
+
+	private int id;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public abstract void start();// abstract method forces all child classes to
+							// implement this method
+
+	public abstract void doStuff();
+	public abstract void shutdown();
+	
+	public void run() {
+		start();
+		doStuff();
+		shutdown();
+		
+	}
+	
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+
+public class Camera extends Machine {
+
+	@Override
+	public void start() {
+		System.out.println("starting camera");
+		
+	}
+
+	@Override
+	public void doStuff() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void shutdown() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+public class Car extends Machine {
+
+	@Override
+	public void start() {
+		System.out.println("starting car");
+		
+	}
+
+	@Override
+	public void doStuff() {
+		System.out.println("Do stuff in car");
+		
+	}
+
+	@Override
+	public void shutdown() {
+		System.out.println("shutdown car");
+		
+	}
+
+}
+
+
+
