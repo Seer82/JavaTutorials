@@ -1,0 +1,45 @@
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.text.ParseException;
+
+public class MultiExceptions {
+
+	public static void main(String[] args) {
+
+		Test test = new Test();
+
+		/*
+		 * try { test.run(); } catch (IOException e) { // TODO Auto-generated
+		 * catch block e.printStackTrace(); } catch (ParseException e) {
+		 * System.out.println("couldnt parse command file"); }
+		 */
+
+		/*
+		 * try { test.run(); } catch (IOException | ParseException e) { // TODO
+		 * Auto-generated catch block e.printStackTrace(); }
+		 */
+
+		try {
+			test.run();
+		} catch (Exception e) {// due to polymorphism we can use the super class
+								// Exception to catch any exception
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+
+		}
+
+		try {
+			test.input();// handling the child exception before the parent exception
+		} catch (FileNotFoundException e) { // java works down the catch blocks,
+											// so we must have the child
+											// exceptions first to get specific
+											// exceptions
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}
