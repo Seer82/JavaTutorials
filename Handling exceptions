@@ -1,0 +1,37 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+
+
+public class HandlingExceptions {
+
+	/**
+	 * @param args
+	 * @throws FileNotFoundException 
+	 */
+	/*public static void main(String[] args) throws FileNotFoundException {
+		//error will print stack trace to console, read from top to bottom
+		File file = new File("test.txt");
+		
+		FileReader fr = new FileReader(file); */
+	
+	
+	public static void main(String[] args) {
+	//error will print stack trace to console, read from top to bottom
+	File file = new File("test.txt");
+	
+	try {
+		FileReader fr = new FileReader(file);
+		//this will not execute if and exception is thrown
+		System.out.println("continuing..");
+	} catch (FileNotFoundException e) {
+		System.out.println("file no found:" + file.toString()); // best practice is to have your program 
+		//output an explanation of an exception rather than a raw stacktrace
+	}// this is a try catch block
+	
+		
+		
+
+	}
+
+}
