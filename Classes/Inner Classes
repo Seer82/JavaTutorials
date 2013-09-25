@@ -1,0 +1,83 @@
+public class Robot {
+
+	private int id;
+
+	private class Brain { /*
+						 * 1. none static, or nested classes are good for logically
+						 * grouping different concepts, in this example a robot
+						 * has a brain, the brain being the nested class of
+						 * robot
+						 */
+
+		public void think() {
+			System.out.println("Robot " + id + " is thinking.");
+		}
+	}
+
+	public static class Battery { /*
+								 *2. static inner class are used when you want to
+								 * group it with the enclosing out class but you
+								 * dont have to access its instance variables
+								 */
+
+		public void charge() {
+			System.out.println("battery charging...");/*
+													 * + id will not work as it
+													 * is a none static instance
+													 * variable
+													 */
+		}
+
+	}
+
+	public Robot(int id) {
+		this.id = id;
+	}
+
+	public void start() {
+
+		System.out.println("starting robot: " + id);
+
+		Brain brain = new Brain();
+		brain.think();// calling the method think from the nested class brain
+		
+	 final String nickname = "robbie";//local variable
+
+		class Temp { //3. a class inside a method, cannot be referred to outside of the method
+
+			public void doSomething() {
+System.out.println("Robot id is: " + id);
+System.out.println("my name is: " + nickname);
+			}
+		}
+		Temp temp1 = new Temp();
+		temp1.doSomething();
+	}
+
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+public class Innerclasses {
+
+	public static void main(String[] args) {
+
+		Robot robot1 = new Robot(7);
+		robot1.start();
+
+		/*
+		 * Robot.Brain brain = robot1.new Brain(); this would only work if
+		 * nested class Brain is declared public brain.think(); this is not necessary
+		 * to implement ever but and interesting implementation
+		 */
+		
+		Robot.Battery battery = new Robot.Battery();
+		battery.charge();
+		
+
+	}
+
+}
+
+
+
+
