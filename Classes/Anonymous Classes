@@ -1,3 +1,6 @@
+//Anonymous Classes are a type of inner class
+
+
 class Machine {
 
 	public void start() {
