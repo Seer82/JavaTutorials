@@ -1,0 +1,32 @@
+public class Runtime {
+
+	public static void main(String[] args) {
+
+		int value = 7;
+
+		// value = value/0;
+
+		// this produces a runtime error a error that is not handled
+		// a try and catch block statement, it is throw to the main method
+		// automatically
+		// runtime errors are serious fundamental errors in program logic
+
+		System.out.println(value);
+
+		String text = null;// here we have a reference variable pointing to
+							// null, since null has no length we get an
+							// exception while calling the .length method
+
+		// System.out.println(text.length());
+
+		String[] names = { "apple", "banana", "orange" };
+
+		// System.out.println(names[3]);
+
+		// if we try to access an element that is not in the array, we get an
+		// out of bounds exception. 
+		//you can if you wish catch runtime exceptions but more often than not you do
+		//not want to do this
+
+	}
+}
