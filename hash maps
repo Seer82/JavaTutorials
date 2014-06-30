@@ -1,0 +1,32 @@
+package hashmaps;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Hash {
+
+	public static void main(String[] args) {
+		
+		HashMap<Integer, String> map = new HashMap<Integer, String>();
+		
+		map.put(1, "bmx bandit");
+		map.put(2, "whale");
+		
+		map.put(2, "killer whale"); // second put method will overwrite the duplicate key in this case at 2.
+		
+		
+			//System.out.println(map);
+			String text = map.get(2);
+			
+			System.out.println(text);
+			
+			for (Map.Entry<Integer, String> Entry: map.entrySet()){ //iterating through map
+				
+				int key = Entry.getKey();
+				String value = Entry.getValue();
+				
+				System.out.println(key + ": " + value);
+			}
+	}
+
+}
