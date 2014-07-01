@@ -1,0 +1,37 @@
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.TreeMap;
+
+public class Hash {
+
+	public static void main(String[] args) {
+
+		// for when you want a map that keeps an order to your data you have the
+		// following options.
+
+		LinkedHashMap<Integer, String> hash = new LinkedHashMap<Integer, String>();
+
+		TreeMap<Integer, String> tree = new TreeMap<Integer, String>();
+		// treemap has a natural order sorting, i.e integers numerically, and
+		// string alphabetically
+
+		tryMap(hash);// this will sort by order of data entry,
+		tryMap(tree); // this will sort by key numerically in their natural order
+
+	}
+
+	public static void tryMap(Map<Integer, String> map) {
+
+		map.put(19, "Yellow");
+		map.put(14, "Green");
+		map.put(16, "blue");
+		map.put(17, "Red");
+
+		for (Integer key : map.keySet()) {
+			String value = map.get(key);
+			System.out.println(key + ": " + value);
+		}
+
+	}
+
+}
