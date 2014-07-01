@@ -1,0 +1,100 @@
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class Sets {
+
+	public static void main(String[] args) {
+
+		// HashSet does not retain any order
+		Set<String> set1 = new HashSet<String>();
+
+		set1.add("blue");
+		set1.add("green");
+		set1.add("red");
+		set1.add("black");
+		set1.add("purple");
+
+		// adding duplicate values does nothing unlike lists sets only contain
+		// unique items
+		set1.add("blue");
+
+		Set<String> set2 = new LinkedHashSet<String>();
+		// linkedHashSet will retain order or data entry
+
+		set2.add("blue");
+		set2.add("green");
+		set2.add("red");
+		set2.add("black");
+		set2.add("purple");
+
+		// System.out.println(set2);
+
+		Set<String> set3 = new TreeSet<String>();
+		// Tree set sorts by natural order, in this case alphabetical strings.
+
+		if (set3.isEmpty()) {
+			System.out.println("this set is empty");
+		}
+
+		set3.add("blue");
+		set3.add("green");
+		set3.add("red");
+		set3.add("black");
+		set3.add("purple");
+		set3.add("orange");
+
+		// System.out.println(set3);
+
+		// /////////////////////Set Iteration///////////////////////////////
+
+		for (String element : set3) {
+			System.out.println(element);
+
+		}
+
+		// /////////////////////Checking set for particular Item////////////
+
+		if (set3.contains("orange")) {
+			System.out.println("Contains orange");
+
+		} else
+
+			System.out.println("Does not contain orange");
+
+		// /////////////////////////intersection////////////////////////////
+
+		Set<String> set4 = new HashSet<String>();
+
+		/////set 4 contains some elements of set 3 and some new elements as well///
+		
+
+		set4.add("blue");
+		set4.add("green");
+		set4.add("red");
+		set4.add("Silver");
+		set4.add("gold");
+		set4.add("orange");
+		
+
+		Set<String> intersection = new HashSet<String>(set3);
+		intersection.retainAll(set4); // retaining elements only that are common to both sets 3 and 4;
+		System.out.println(intersection);
+
+		//////////Finding Elements unique to set 4 by removing common elements//////////////////////////////////////////////
+		
+		Set<String> difference = new HashSet<String>(set4);
+		difference.removeAll(set3);
+		System.out.println(difference);
+		
+		
+		
+		
+		
+		
+	}
+	
+	
+	
+}
