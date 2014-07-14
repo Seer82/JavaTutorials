@@ -1,0 +1,75 @@
+import java.util.NoSuchElementException;
+import java.util.concurrent.ArrayBlockingQueue;
+
+public class Queue {
+
+	public static void main(String[] args) {
+		// <-- (head of queue, items leave here) 000000000000000000000000 <--
+		// (tail end of queue) FIFO (first in first out system)
+
+		
+		//Queue interface has two sets of equivalent methods, one set throws exceptions, the other set 
+		//has special return values
+		ArrayBlockingQueue<Integer> q1 = new ArrayBlockingQueue<Integer>(3);
+		//ArrayBlockingQueue is a bounded Queue, in this case 3 elements large
+
+		// System.out.println("head of the queue is: " +q1.element());
+		// throws no such element exception as no element yet added
+		q1.add(10);
+		q1.add(20);
+		q1.add(30);
+
+		System.out.println("head of the queue is: " + q1.element());
+
+		try {
+			// q1.add(40);
+
+		} catch (IllegalStateException e) {
+			System.out.println("tried to add too many elements to the queue");
+			// linked list would be of unbounded size so you wouldn't get this
+			// exception
+		}
+
+		for (Integer value : q1) {
+			System.out.println("queue 1 value: " + value);
+		}
+
+		System.out.println("value removed from queue: " + q1.remove());
+		System.out.println("value removed from queue: " + q1.remove());
+		System.out.println("value removed from queue: " + q1.remove());
+		try {
+			// System.out.println("value removed from queue: " + q1.remove());
+
+		} catch (NoSuchElementException e) {
+			System.out.println("cant remove element that isnt there");
+		}
+
+		// /////////////////////////////////////Methods with special return values////////////////////////////////////////////////
+
+		ArrayBlockingQueue<Integer> q2 = new ArrayBlockingQueue<Integer>(2);
+
+		q2.offer(10);
+		q2.offer(20);
+		if (q2.offer(30) == false) {
+			System.out.println("offer failed to add element");// offer hasn't
+																// added this
+																// last item
+																// here, returns
+																// false if it
+																// cannot add
+																// the element
+			System.out.println("Queue 2 peek: " + q2.peek());
+			
+		}
+
+		for (Integer value : q2) {
+			System.out.println("queue 2 value: " + value);
+		}
+		
+		System.out.println("Queue 2 poll " + q2.poll());
+		System.out.println("Queue 2 poll " + q2.poll());
+		System.out.println("Queue 2 poll " + q2.poll()); // returns null if no element to remove found
+
+	}
+
+}
