@@ -1,0 +1,41 @@
+import java.util.Iterator;
+import java.util.LinkedList;
+
+public class Iterators {
+
+	public static void main(String[] args) {
+
+		LinkedList<String> animals = new LinkedList<String>();
+
+		animals.add("whale");
+		animals.add("duck");
+		animals.add("owl");
+		animals.add("ameoba");
+
+		Iterator<String> it = animals.iterator();
+
+		while (it.hasNext()) { // while the iterator has a next element, return
+								// that item.
+			String animal1 = it.next();
+
+			if (animal1.equals("ameoba")) {
+				it.remove(); // if you want to remove an element while iterating through it you have to use an iterator
+			}
+
+			System.out.println(animal1);
+
+		}
+		System.out.println();
+		// ////////////modern iteration, Java 5 and later/////////////////////
+		
+		  for(String animal: animals){ System.out.println(animal);
+		  
+		 // animals.remove(2); will throw a concurrent modification exception
+		  }
+		  
+		  
+		 
+
+	}
+
+}
